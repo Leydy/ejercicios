@@ -6,17 +6,55 @@
     <title>Document</title>
 </head>
 <body>
-   
+    
 </body>
+
 <script>
-    var peso = prompt("Dime tu peso");
-    document.write( peso );
-    var altura = prompt("Dime tu altura")
 
-var cal = peso/Math.pow(altura, 2);
-alert("Tu IMC es: "+cal);
+    var idiomas = [{
+    idiomaE: "Español",
+    textoE: "Bienvenido al curso de React Native en PachaQTec",
+    id_idioma: 1,
+},
 
-console.log(cal);
+{
+    idiomaI: "Ingles",
+    texto: "Welcome to the React Native course at PachaQtec",
+    id_idioma: 2,
+},
+   
+{
+    idiomaF: "Francés",
+    texto: "Bienvenue dans le cours React Native chez PachaQtec",
+    id_idioma: 3,
+},
+    
+{
+    idiomaI: "Italiano",
+    texto: "Benvenuti al corso React Native presso PachaQTec",
+    id_idioma: 4,
+    },
+    
+    {
+        idiomaP: "Portugués",
+        texto: "Bem-vindo ao curso React Native na PachaQtec",
+        id_idioma: 5,
+        }
+        ];
+    var idioma = "";
+    var traductor = prompt("Ingrese un texto");
+    var casos = {
+        0: idiomas.idiomaI,
+    };
+    if(casos[traductor]){
+        idioma = casos[traductor];
+    }else{
+        
+    }
+    
+
+
+
+
 </script>
 </html>
-   
