@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="circulo" width="250" height="200"></canvas>
+    <input type="button" id="resultado" onclick="resultado()" value="Mostrar área y longitud"/>
+    
+    <p id="show"></p>
+    
+</body>
+<script>
+var pi = 3.1416;
+var circulo = document.getElementById("circulo");
+		if (circulo && circulo.getContext) {
+		var contexto = circulo.getContext("2d");
+			if (contexto) {
+					var X = circulo.width/2;
+					var Y = circulo.height/2;
+                    var r = 75;
+                    contexto.strokeStyle = "#CC2EFA";
+					contexto.fillStyle = "#F781F3";
+					contexto.lineWidth = 1;
+					contexto.arc(X,Y,r,0,2*Math.PI);
+					contexto.fill();
+                    contexto.stroke();
+
+			}
+        }
+
+        function resultado() {
+        area = pi*Math.pow(r, 2);
+        longitud = (2*r)*pi;
+
+        
+        document.write("Área: "+area+"<br/>Longitud: "+longitud);
+        
+}
+
+</script>
+</html>
+
+

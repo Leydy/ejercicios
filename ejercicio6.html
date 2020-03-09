@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Marcar</p>
+    <input type="number" id="txtNumero" value=""/> <br>
+    <input type="button" id="llamar" onclick="identificador()" value="Llamar"/>
+        
+</body>
+<script>
+var contactos = [{
+    nombre:"Leydy",
+    numero: 999999999,
+},
+    {
+    nombre:"Travis",
+    numero: 988888888,
+},
+{
+    nombre:"Smoking",
+    numero: 97777777,
+},
+
+];
+function identificador() {
+		var numero = document.getElementById('txtNumero');
+		
+        contactos.map((item) => {
+		
+        if(String(item.numero) === String(numero.value)) {
+            
+            alert("Marcando a: "+item.nombre);
+            
+            
+        }else{
+            alert("Número desconocido");
+        }
+        
+})}
+
+</script>
+</html>
